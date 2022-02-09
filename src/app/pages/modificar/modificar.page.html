@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar class="naranjo">
+    <ion-title>Modificar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img src="assets/images/restablecer.svg"> </ion-img>
+  <ion-item class="ion-margin-top">
+    <ion-icon name="person" slot="start"> </ion-icon>
+    <ion-label position="floating">Usuario</ion-label>
+
+    <ion-input [(ngModel)]="modeloUser"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-icon name="key" slot="start"> </ion-icon>
+    <ion-label position="floating">Contraseña</ion-label>
+
+    <ion-input [(ngModel)]="modeloPass1" type="password"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-icon name="key" slot="start"> </ion-icon>
+    <ion-label position="floating">Nueva contraseña</ion-label>
+
+    <ion-input [(ngModel)]="modeloPass2" type="password"></ion-input>
+  </ion-item>
+  <ion-button
+    (click)="modificarUsuario()"
+    expand="full"
+    class="ion-margin-top naranjo"
+    >Ingresar
+  </ion-button>
+</ion-content>

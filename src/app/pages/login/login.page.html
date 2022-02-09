@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar class="naranjo">
+    <ion-title>Bienvenido!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img src="assets/images/login.svg"> </ion-img>
+  <ion-item class="ion-margin-top">
+    <ion-icon name="person" slot="start"> </ion-icon>
+    <ion-label position="floating">Usuario</ion-label>
+
+    <ion-input [(ngModel)]="modeloUser"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-icon name="key" slot="start"> </ion-icon>
+    <ion-label position="floating">Contraseña</ion-label>
+
+    <ion-input [(ngModel)]="modeloPass" type="password"></ion-input>
+  </ion-item>
+  <ion-button
+    (click)="validarLogin()"
+    expand="full"
+    class="ion-margin-top naranjo"
+  >
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    Ingresar
+  </ion-button>
+  <ion-button
+    expand="full"
+    class="ion-margin-top naranjo"
+    (click)="mostrarFormulario()"
+  >
+    <ion-icon name="person-add-outline" slot="start"></ion-icon>
+    Nuevo Usuario
+  </ion-button>
+  <ion-button
+    expand="full"
+    class="ion-margin-top naranjo"
+    routerLink="/modificar"
+  >
+    <ion-icon name="key-outline" slot="start"></ion-icon>
+    Modificar Contraseña
+  </ion-button>
+</ion-content>
